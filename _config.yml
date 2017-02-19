@@ -20,6 +20,7 @@ description: >
   project.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jblog.andbit.net" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /:year/:month/:day/:title/
 twitter_username: jkarneges
 github_username: jkarneges
 
