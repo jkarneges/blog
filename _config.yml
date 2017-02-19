@@ -27,8 +27,6 @@ github_username: jkarneges
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
-  - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
