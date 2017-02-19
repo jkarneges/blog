@@ -5,6 +5,8 @@ date:   2006-04-14 12:59:00
 ---
 Delayed signals are a design mechanism for reducing errors by people using your object (similar in spirit to [Signal Safety][signal-safety]). This is a difficult topic, because up until this writing I still haven't been able to formally define a universal rule for when you should use delayed signals. I'll attempt that now, and show some code to illustrate.
 
+<!--more-->
+
 **Rule:** *When requesting a result from an object by first calling a member function and then obtaining the result via a signal, the signal should not be emitted until after the application has returned to the event loop.*
 
 To explain just what the heck that means, consider how signal usage can fall into one of two groups: 1) as a means of returning or indicating a result of a requested operation, or 2) as a means of announcing general status changes, independent of a request. #1 is used in worker objects, for example `QTcpSocket` or `QProcess`, where there is a request/response expectation. #2 is used predominantly in GUI objects (widgets), where the signals that occur are not requested nor required to operate.

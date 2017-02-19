@@ -5,6 +5,8 @@ date:   2008-02-05 06:11:00
 ---
 It has been almost four years since I first wrote about Signal Safety. The concept has held up well all this time, and I follow it (as well as the rest of the [Delta Object Rules][dor]) in any new code I write. However, last year I discovered there is more to the problem, and given that the original article was written in the Qt 3 era I decided it was time for an update. The original article is even obsolete, now that Qt 4 restricts `QObject::deleteLater()` processing to the same event-loop depth. This article shall serve as a modern replacement for the original article.
 
+<!--more-->
+
 ## The Problem
 
 Most method calls in a program run in a self-contained or "black box" fashion. That is, a method is given a set of inputs, and, upon completion, that method provides some expected outputs. The state of the universe *during* the method call is most often undefined. This goes for plain C functions as well as for C++ class member functions.

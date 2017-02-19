@@ -10,6 +10,8 @@ The Delta Object Rules (DOR) are a set of rules that QObjects should obey in ord
 * [Nested Eventloops][nested-eventloops] (NE). Nested eventloops must not be used within the same thread as the object.
 * [Signal Retraction][signal-retraction] (SR). For request/response, response signals must not be emitted if the request has been cancelled (deleting the object also qualifies as cancellation).
 
+<!--more-->
+
 Some objects in Qt itself are known to be DOR-compliant, despite not being labeled in any special way. These are: `QObject` (except for the `destroyed()` signal), `QTimer`, and `QSocketNotifier`. You can assume these objects are compliant, but do not assume this for any other objects (in any project, Qt or otherwise) unless they are labeled. **Update (2008/8/27):** As of Qt 4.4, `QTimer` and `QSocketNotifier` will print console errors if destructed during their signals. Internally they are actually safe to destruct, but since Trolltech is trying to deprecate this feature these objects are to no longer be considered DOR-compliant.
 
 The DOR label can be applied to a method, an object, or even an entire project. Exceptions are allowed. For example, it would be fine to say an object is DOR compliant except for one signal that is not safe to delete from (SS not supported for that signal) or for one method that invokes a nested eventloop (NE not supported for that method).

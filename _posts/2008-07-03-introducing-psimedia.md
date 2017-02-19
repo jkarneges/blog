@@ -7,6 +7,8 @@ date:   2008-07-03 21:16:00
 
 Voice (and video) chat is a feature we've wanted in Psi for a long time. However, implementing voice/video chat is not straightforward, and this is partly due to all of the new concepts that have to be introduced into the application in order to make it happen. Cameras, microphones, codecs, and RTP are all just very foreign to Psi. The code necessary to handle a multimedia "stack" could easily exceed the amount of code in our own IM stack! Fortunately, there are libraries out there to handle the task.
 
+<!--more-->
+
 In 2004, we considered RealNetworks' [Helix framework][helix]. For receiving content, we found this framework to be quite mature. However, for transmitting content, it was clearly not designed for end-user desktop applications and was even GPL-incompatible in that scenario. Quite some work went into the Psi+Helix effort, but ultimately it was abandoned.
 
 In 2005, we considered Google's [libjingle][libjingle]. We managed to get voice chat working with it, but the code never went beyond the experimental stage. This was due to the limited platform support at the time (Linux audio only at first, though Remko managed to add in Mac audio support) and libjingle's lack of maintenance. Libjingle works as a black box, handling not only multimedia but also the Jingle protocol. Unfortunately, this meant that as the Jingle protocol changed, libjingle fell out of spec. We also felt it was a tad intrusive for libjingle to be handling XMPP stuff.

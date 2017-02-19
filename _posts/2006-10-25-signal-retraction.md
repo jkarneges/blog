@@ -5,6 +5,8 @@ date:   2006-10-26 05:09:00
 ---
 Qt 4 introduced easier ways to queue method calls until the next eventloop cycle. Now you can connect signals and slots together with QueuedConnection. You can use the connectionless `QMetaObject::invokeMethod()` with the `QueuedConnection` mode as well. In the old days, a delayed method call took more work. Usually you would store argument values somewhere, use a QTimer to invoke a special slot at a later time, and this slot would then take the original argument values and call the method you wanted to call in the first place. With Qt 4, you can get this stuff in one line.
 
+<!--more-->
+
 *Anyway*, delayed calls are often a good thing. They are most useful for assisting with [delayed signals][delayed-signals] (which can also aid in making your object [signal-safe][signal-safety]). In fact, if you wanted to go overboard, you could emit all of your signals late. This would make your object pretty darn safe, just not very optimized.
 
 There is a price to all of this delayed business though. One major issue is that the state of the object may have changed between the emit and the time of receipt. Maybe a certain object expects you to inspect one of its properties from within a slot connected to one of its signals. If you were to make this a `QueuedConnection`, it might not be possible to use this object correctly. Of course, given that the connection mode is the *user's* choice, hopefully no new objects are being written that rely on `DirectConnection`. If they are, they'd better be documented as such.

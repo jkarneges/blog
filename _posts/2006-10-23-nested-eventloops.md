@@ -5,6 +5,8 @@ date:   2006-10-24 06:46:00
 ---
 To define the title: a nested eventloop is when you invoke the eventloop again rather than returning back to it. This is `QCoreApplication::processEvents()`, `QDialog::exec()`, `QMessageBox::information()`, and the like. In all but the most controlled situations, performing a nested eventloop using these traditional methods is dangerous and should be avoided. On the other hand, restricting event processing to a specific subset of objects can be safe. Unfortunately, Qt doesn't provide a direct and general way to perform this kind of "scoped" eventloop.
 
+<!--more-->
+
 First, let's discuss why the traditional nested eventloop functions are bad. Spinning the eventloop is a big deal. Every object in the application (or, more specifically, in the thread, if your app is multithreaded, but most aren't) will run when the eventloop is run. This means event handlers being called, possible signals emitted as a result of those events, etc. This can cause unpredictable behaviors. If the application has not "returned to the eventloop" yet, then there may be functions on the stack that are incomplete, and so the entire state of the program is not ready to receive events yet. A form of re-entrancy is also possible, whereby an event handler is called, sometime down the line the eventloop is run again, and then the same event handler is called again. The event handler is now on the stack twice. Did you write your application to work under this kind of condition?
 
 Here is an example of an object that prompts the user for two socket ids, and then emits a signal when either one has data. This is a bit contrived, but it is short, and the problem should be easy to spot.
