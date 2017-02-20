@@ -16,8 +16,7 @@
 title: Justin's Blog
 email: justin@karneges.com
 description: >
-  This blog is mainly an archive of old content from the deprecated Delta XMPP
-  project.
+  This is Justin's personal blog, containing posts about software development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jblog.andbit.net" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:year/:month/:day/:title/
