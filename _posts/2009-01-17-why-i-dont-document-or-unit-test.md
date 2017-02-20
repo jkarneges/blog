@@ -2,6 +2,8 @@
 layout: post
 title:  Why I don't document or unit test
 date:   2009-01-17 09:19:00
+author: justin
+categories: programming
 ---
 I apologize, the headline was mostly an attention grabber. I do write documentation and create unit tests, and in fact I think they are great things. All software projects should be completely documented and have thorough automated testing. However, more often than not, projects fall short in providing these things. Maybe it's because there is no glory in documenting and testing? Tests are especially a bore, as they just prove what should have already been true.
 

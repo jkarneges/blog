@@ -2,6 +2,8 @@
 layout: post
 title:  Three years later, a new Psi
 date:   2012-08-28 10:03:00
+author: justin
+categories: jabber psi xmpp
 ---
 The latest development cycle has been a tough one. While Psi releases have  never been exactly punctual, the time gap between 0.14 and 0.15 is surely  the longest yet.
 

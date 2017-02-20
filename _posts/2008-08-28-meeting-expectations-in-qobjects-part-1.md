@@ -2,6 +2,8 @@
 layout: post
 title:  Meeting expectations in QObjects (Part 1)
 date:   2008-08-28 09:30:00
+author: justin
+categories: programming
 ---
 I've written a few articles on how I believe QObjects should behave, and I've even attempted to codify these behaviors in the [Delta Object Rules][dor]. However, I haven't offered many solutions on how to go about making QObjects that follow these rules. This is in part because I didn't really have any good solutions. For the past few years I've experimented with some different approaches though, and I'll outline them here.
 

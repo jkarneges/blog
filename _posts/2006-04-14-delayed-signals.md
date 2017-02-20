@@ -2,6 +2,8 @@
 layout: post
 title:  Delayed Signals
 date:   2006-04-14 12:59:00
+author: justin
+categories: programming
 ---
 Delayed signals are a design mechanism for reducing errors by people using your object (similar in spirit to [Signal Safety][signal-safety]). This is a difficult topic, because up until this writing I still haven't been able to formally define a universal rule for when you should use delayed signals. I'll attempt that now, and show some code to illustrate.
 

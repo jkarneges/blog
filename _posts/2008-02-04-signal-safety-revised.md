@@ -2,6 +2,8 @@
 layout: post
 title:  Signal Safety Revised
 date:   2008-02-05 06:11:00
+author: justin
+categories: programming
 ---
 It has been almost four years since I first wrote about Signal Safety. The concept has held up well all this time, and I follow it (as well as the rest of the [Delta Object Rules][dor]) in any new code I write. However, last year I discovered there is more to the problem, and given that the original article was written in the Qt 3 era I decided it was time for an update. The original article is even obsolete, now that Qt 4 restricts `QObject::deleteLater()` processing to the same event-loop depth. This article shall serve as a modern replacement for the original article.
 

@@ -2,6 +2,8 @@
 layout: post
 title:  Nested Eventloops
 date:   2006-10-24 06:46:00
+author: justin
+categories: programming
 ---
 To define the title: a nested eventloop is when you invoke the eventloop again rather than returning back to it. This is `QCoreApplication::processEvents()`, `QDialog::exec()`, `QMessageBox::information()`, and the like. In all but the most controlled situations, performing a nested eventloop using these traditional methods is dangerous and should be avoided. On the other hand, restricting event processing to a specific subset of objects can be safe. Unfortunately, Qt doesn't provide a direct and general way to perform this kind of "scoped" eventloop.
 

@@ -2,6 +2,8 @@
 layout: post
 title:  Nested eventloops are pure evil
 date:   2008-11-23 02:26:00
+author: justin
+categories: programming
 ---
 From the [gst_bus_poll() documentation of GStreamer][gst-bus-poll]:
 

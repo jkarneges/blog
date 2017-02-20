@@ -2,6 +2,8 @@
 layout: post
 title:  Crossplatform Thoughts on Psi/Mac and the Lowest Common Denominator
 date:   2003-10-23 02:30:00
+author: justin
+categories: programming psi
 ---
 I've been thinking about the issues of crossplatform programming lately now that I want to improve Psi/Mac. The program feels alien to MacOS X for two reasons:
 

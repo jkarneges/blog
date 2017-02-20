@@ -2,6 +2,8 @@
 layout: post
 title:  Meeting expectations in QObjects (Part 2)
 date:   2010-01-10 02:26:00
+author: justin
+categories: programming
 ---
 In [Part 1][part1], we discussed how QObjects often don't behave the way we expect. This is largely because developing a QObject that behaves the way we would expect is not always a simple process. Commonly, if you develop a QObject in the most straightforward manner, then it will behave unexpectedly, even to yourself!
 

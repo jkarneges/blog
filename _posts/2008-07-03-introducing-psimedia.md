@@ -2,6 +2,8 @@
 layout: post
 title:  Introducing PsiMedia
 date:   2008-07-03 21:16:00
+author: justin
+categories: jabber programming psi xmpp
 ---
 <a href="/assets/psimedia2.png">![PsiMedia Test screenshot](/assets/psimedia2_small.jpg)</a>
 

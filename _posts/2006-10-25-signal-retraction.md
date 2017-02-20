@@ -2,6 +2,8 @@
 layout: post
 title:  Signal Retraction
 date:   2006-10-26 05:09:00
+author: justin
+categories: programming
 ---
 Qt 4 introduced easier ways to queue method calls until the next eventloop cycle. Now you can connect signals and slots together with QueuedConnection. You can use the connectionless `QMetaObject::invokeMethod()` with the `QueuedConnection` mode as well. In the old days, a delayed method call took more work. Usually you would store argument values somewhere, use a QTimer to invoke a special slot at a later time, and this slot would then take the original argument values and call the method you wanted to call in the first place. With Qt 4, you can get this stuff in one line.
 

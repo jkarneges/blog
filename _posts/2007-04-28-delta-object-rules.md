@@ -2,6 +2,8 @@
 layout: post
 title:  Delta Object Rules
 date:   2007-04-28 00:05:00
+author: justin
+categories: programming
 ---
 The Delta Object Rules (DOR) are a set of rules that QObjects should obey in order to ensure predictable and safe behavior. The rules are:
 

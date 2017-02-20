@@ -2,6 +2,8 @@
 layout: post
 title:  QCA and Smartcards
 date:   2007-08-21 10:05:00
+author: justin
+categories: programming psi security
 ---
 In public key cryptography, it is critical to keep your private key, well, *private*. One of the major features of QCA 2.0 is support for smartcard devices, and these devices allow convenient and safe storage of private keys. Smartcards perform cryptographic operations in hardware, never revealing the keys to the requesting computer. Traditionally, smartcards have a "credit card" form-factor and require a reader device, but today there also exist smartcards which have the form-factor of a USB mass storage device (they are not "cards" at all). The term "smartcard" can apply to either kind of device, as can "smart token" or simply "token".
 
