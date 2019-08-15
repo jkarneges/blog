@@ -246,4 +246,4 @@ Happy coding!
 
 [part1]: /2008/08/28/meeting-expectations-in-qobjects-part-1/
 [iris]: https://github.com/psi-im/iris
-[ne-evil]: /2008/11/22/nested-eventloops-are-pure-evil/
+[ne-evil]: /2008/11/23/nested-eventloops-are-pure-evil/
