@@ -576,7 +576,7 @@ Basically the above unsafe code wires up the vtable functions to `MyWaker`'s nor
 
 Obviously this is not the most sophisticated executor, but it should work enough as an example.
 
-# Using the executor
+## Using the executor
 
 Let's give it a spin! The `sleep` function is a wrapper around `TimerFuture` which we declared earlier.
 
