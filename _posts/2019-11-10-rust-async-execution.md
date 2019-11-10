@@ -8,7 +8,7 @@ categories: programming
 
 As a longtime C/C++ programmer that's done a fair amount of concurrency work (especially network stuff for [Fanout][fanout]), I'm intrigued by the [Rust programming language][rust-lang] and its [recent async capabilities][async-announcement].
 
-You've probably heard that Rust has no runtime. This remains true even with the introduction of the async/await feature. It's on you to bring your own runtime such as [tokio][tokio] or [async-std][async-std].
+Like C/C++, Rust has no runtime. Interestingly, this remains true even with the introduction of async. Using the `async` or `await` keywords doesn't just magically run code concurrently. It's on you to bring your own runtime such as [tokio][tokio] or [async-std][async-std], to interface with the core language elements.
 
 But, you can also implement your own runtime! Over the past months I've been learning all the little implementation details. In this article I'll describe how to execute Rust async functions using nothing but the standard library.
 
@@ -28,7 +28,7 @@ In order to do anything useful with Rust async, you'll need some non-generated i
 
 Personally, I think this is a brilliant design. Rust is able to provide nice async syntax without having to commit to a particular runtime.
 
-Note that even though it sounds like language the itself doesn't provide much, its built-in async code generation is a [challenging problem][tyler-optimizing].
+Note that even though it sounds like the language itself doesn't provide much, its built-in async code generation is a [challenging problem][tyler-optimizing].
 
 ## Implementing a Future
 
