@@ -131,7 +131,7 @@ match p.poll(&mut cx) {
 }
 ```
 
-(side note: it's interesting that a `Pin` instance can be used as the `self` value. It seems Rust doesn't limit `self` to just `T`, `&T`, and `&mut T` but also allows anything that can `Deref` to one of those).
+(side note: it's interesting that `Pin` can be used as the `self` type. It seems Rust doesn't limit `self` to just `T`, `&T`, and `&mut T`, but allows some other types from a [fixed list][associated-methods]).
 
 Are you off the hook about keeping the memory pinned once the `Pin` has been consumed and dropped by the `poll()` method? Nope! Quoth [the docs][pin-safety], "A value, once pinned, must remain pinned forever". In fact, this is why constructing the `Pin` is unsafe. The unsafe part is you're eventually going to lose the `Pin`, but you'll still need to uphold the pinning contract despite not having the `Pin` to protect you anymore.
 
@@ -619,6 +619,7 @@ Full source [here][source].
 [async-std]: https://async.rs/
 [future-trait]: https://doc.rust-lang.org/std/future/trait.Future.html
 [tyler-optimizing]: https://tmandry.gitlab.io/blog/posts/optimizing-await-1/
+[associated-methods]: https://doc.rust-lang.org/reference/items/associated-items.html#methods
 [pin-safety]: https://doc.rust-lang.org/std/pin/struct.Pin.html#safety
 [context-from-waker]: https://doc.rust-lang.org/std/task/struct.Context.html#method.from_waker
 [waker-from-raw]: https://doc.rust-lang.org/std/task/struct.Waker.html#method.from_raw
